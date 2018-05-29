@@ -8,8 +8,8 @@ const {
 } = require('../handlers/messages');
 
 //prefix - /api/users/:id/messages
-router.route('/')
-  .post(createMessage)
+router.route('/').post(createMessage)
+router.route('/:message_id')
   .get(getMessage)
   .delete(deleteMessage);
 
